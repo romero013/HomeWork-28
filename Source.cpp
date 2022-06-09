@@ -66,7 +66,9 @@ int main() {
 	return 0;
 }
 // Изменение длины массива
-template <typename T> void resizeArr(T *&arr, int length, int length1) {	
+template <typename T> void resizeArr(T *&arr, int length, int length1) {
+	if (length == length1)
+		return;
 
 	if (length < length1) {
 		T *tmp = new T[length1];
